@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inventario - Mariley Beauty Salon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+<body class="bg-pink-50 min-h-screen">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-pink-600">Mariley Beauty Salon - Inventario</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="text-pink-600 hover:underline">Inicio</a>
+      <a href="citas.html" class="text-pink-600 hover:underline">Citas</a>
+      <a href="servicios.html" class="text-pink-600 hover:underline">Servicios</a>
+      <a href="gastos.html" class="text-pink-600 hover:underline">Gastos</a>
+      <a href="reportes.html" class="text-pink-600 hover:underline">Reportes</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-pink-600">Control de Inventario</h2>
+      <button onclick="toggleModal('modalProducto')" class="bg-pink-500 text-white px-4 py-2 rounded">+ Agregar Producto</button>
+    </div>
+
+    <input type="text" placeholder="Buscar producto..." class="border p-2 w-full mb-4 rounded">
+
+    <table class="min-w-full bg-white rounded shadow">
+      <thead class="bg-pink-100">
+        <tr>
+          <th class="py-2 px-4 text-left">Producto</th>
+          <th class="py-2 px-4 text-left">Stock</th>
+          <th class="py-2 px-4 text-left">Precio</th>
+          <th class="py-2 px-4 text-left">Oferta</th>
+          <th class="py-2 px-4 text-center">Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="py-2 px-4">Champú hidratante</td>
+          <td class="py-2 px-4">10</td>
+          <td class="py-2 px-4">$12.00</td>
+          <td class="py-2 px-4">No</td>
+          <td class="py-2 px-4 text-center">
+            <button class="text-blue-600 hover:underline">Editar</button> |
+            <button class="text-green-600 hover:underline">Oferta</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Modal Nuevo Producto -->
+    <div id="modalProducto" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+      <div class="bg-white p-6 rounded shadow-lg w-96">
+        <h3 class="text-lg font-semibold text-pink-600 mb-4">Agregar Producto</h3>
+        <form class="flex flex-col gap-3">
+          <input type="text" placeholder="Nombre del producto" class="border p-2 rounded">
+          <input type="number" placeholder="Stock inicial" class="border p-2 rounded">
+          <input type="number" step="0.01" placeholder="Precio" class="border p-2 rounded">
+          <textarea placeholder="Descripción" class="border p-2 rounded"></textarea>
+          <div class="flex justify-end gap-2 mt-4">
+            <button type="button" onclick="toggleModal('modalProducto')" class="bg-gray-300 px-4 py-2 rounded">Cancelar</button>
+            <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

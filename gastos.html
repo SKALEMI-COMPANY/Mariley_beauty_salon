@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gastos - Mariley Beauty Salon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+<body class="bg-pink-50 min-h-screen">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-pink-600">Mariley Beauty Salon - Gastos</h1>
+    <nav class="space-x-4">
+      <a href="index.html" class="text-pink-600 hover:underline">Inicio</a>
+      <a href="citas.html" class="text-pink-600 hover:underline">Citas</a>
+      <a href="inventario.html" class="text-pink-600 hover:underline">Inventario</a>
+      <a href="servicios.html" class="text-pink-600 hover:underline">Servicios</a>
+      <a href="reportes.html" class="text-pink-600 hover:underline">Reportes</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-pink-600">Control de Gastos</h2>
+      <button onclick="toggleModal('modalGasto')" class="bg-pink-500 text-white px-4 py-2 rounded">+ Registrar Gasto</button>
+    </div>
+
+    <input type="text" placeholder="Buscar gasto..." class="border p-2 w-full mb-4 rounded">
+
+    <table class="min-w-full bg-white rounded shadow">
+      <thead class="bg-pink-100">
+        <tr>
+          <th class="py-2 px-4 text-left">Descripción</th>
+          <th class="py-2 px-4 text-left">Monto</th>
+          <th class="py-2 px-4 text-left">Fecha</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="border-b">
+          <td class="py-2 px-4">Compra de tintes</td>
+          <td class="py-2 px-4">$150.00</td>
+          <td class="py-2 px-4">2025-04-10</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Modal Nuevo Gasto -->
+    <div id="modalGasto" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center">
+      <div class="bg-white p-6 rounded shadow-lg w-96">
+        <h3 class="text-lg font-semibold text-pink-600 mb-4">Registrar Gasto</h3>
+        <form class="flex flex-col gap-3">
+          <input type="text" placeholder="Descripción del gasto" class="border p-2 rounded">
+          <input type="number" placeholder="Monto" class="border p-2 rounded">
+          <input type="date" class="border p-2 rounded">
+          <div class="flex justify-end gap-2 mt-4">
+            <button type="button" onclick="toggleModal('modalGasto')" class="bg-gray-300 px-4 py-2 rounded">Cancelar</button>
+            <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded">Guardar</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </main>
+</body>
+</html>

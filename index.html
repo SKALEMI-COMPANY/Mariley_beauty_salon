@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inicio - Mariley Beauty Salon</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/scripts.js" defer></script>
+</head>
+<body class="bg-pink-50 min-h-screen">
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-pink-600">Mariley Beauty Salon</h1>
+    <nav class="space-x-4">
+      <a href="citas.html" class="text-pink-600 hover:underline">Citas</a>
+      <a href="inventario.html" class="text-pink-600 hover:underline">Inventario</a>
+      <a href="servicios.html" class="text-pink-600 hover:underline">Servicios</a>
+      <a href="gastos.html" class="text-pink-600 hover:underline">Gastos</a>
+      <a href="reportes.html" class="text-pink-600 hover:underline">Reportes</a>
+    </nav>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6">
+    <h2 class="text-2xl font-semibold text-pink-600 mb-4">Panel de Bienvenida</h2>
+    <p class="mb-6">Desde este panel puedes acceder a cada sección del sistema de gestión de Mariley Beauty Salon.</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-pink-600 mb-2">Servicios Realizados (Abril)</h3>
+        <p class="text-3xl font-bold text-gray-800">42</p>
+      </div>
+      <div class="bg-white p-6 rounded shadow">
+        <h3 class="text-lg font-semibold text-pink-600 mb-2">Productos Vendidos (Abril)</h3>
+        <p class="text-3xl font-bold text-gray-800">75</p>
+      </div>
+    </div>
+
+    <h3 class="text-xl font-semibold text-pink-600 mt-10 mb-4">Ir a secciones:</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <a href="citas.html" class="bg-pink-100 p-4 rounded text-center hover:bg-pink-200">
+        <h4 class="font-semibold text-pink-700">Citas</h4>
+        <p class="text-sm">Gestión de citas y agendamientos</p>
+      </a>
+      <a href="inventario.html" class="bg-pink-100 p-4 rounded text-center hover:bg-pink-200">
+        <h4 class="font-semibold text-pink-700">Inventario</h4>
+        <p class="text-sm">Productos, stock y ofertas</p>
+      </a>
+      <a href="servicios.html" class="bg-pink-100 p-4 rounded text-center hover:bg-pink-200">
+        <h4 class="font-semibold text-pink-700">Servicios</h4>
+        <p class="text-sm">Tipos de servicios ofrecidos</p>
+      </a>
+      <a href="gastos.html" class="bg-pink-100 p-4 rounded text-center hover:bg-pink-200">
+        <h4 class="font-semibold text-pink-700">Gastos</h4>
+        <p class="text-sm">Registrar y consultar egresos</p>
+      </a>
+      <a href="reportes.html" class="bg-pink-100 p-4 rounded text-center hover:bg-pink-200 col-span-1 md:col-span-3">
+        <h4 class="font-semibold text-pink-700">Reportes</h4>
+        <p class="text-sm">Gráficos, filtros y PDF</p>
+      </a>
+    </div>
+  </main>
+</body>
+</html>
